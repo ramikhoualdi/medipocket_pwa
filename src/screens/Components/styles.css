@@ -1,0 +1,112 @@
+/* header */
+.header-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    min-height: 60px;
+    padding: 20px 50px;
+}
+.header-headerSub {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header-iconStyle {
+    margin-right: 0;
+    font-size: 35px;
+    color: #000000;
+}
+.header-imgStyle {
+    width: 100px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Drawer */
+.drawer-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 20%;
+    height: 100vh;
+    min-width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    /* border-right: 1px solid #000000; */
+    position: absolute;
+    left: 0;
+}
+.drawer-profileStyle{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.drawer-imgStyle{
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+.drawer-drawerContent {
+    padding: 0;
+}
+.drawer-drawerItem {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    padding-left: 15px;
+    margin-bottom: 15px;  
+}
+.drawer-drawerItem2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    padding-left: 15px;
+    margin-bottom: 15px;  
+    margin-top: -30px;
+}
+.drawer-drawerIcon {
+    font-size: 25px;
+    color:#9ba8bb ;
+    margin-right: 15px;
+}
+.drawer-drawerIcon2 {
+    font-size: 25px;
+    color:#ffffff00 ;
+    margin-right: 15px;
+}
+.drawer-drawerText {
+    color: #20283d;
+    font-size: 18px;
+    font-weight: 800;
+}
+.drawer-drawerText2 {
+    color: #808080;
+    font-size: 16px;
+    font-weight: 600;
+}
+.drawer-closeContainer {
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+    width: 100%;
+}
+.drawer-drawerIcon3 {
+    font-size: 25px;
+    color:#9ba8bb ;
+    padding: 10px; 
+    position: absolute;
+}
+
