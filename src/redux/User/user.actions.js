@@ -1,5 +1,9 @@
 import userTypes from "./user.types";
-import { storeData, removeStoreData, getStorage } from '../../util/AsyncStorage';
+import {
+  storeData,
+  removeStoreData,
+  getStorage,
+} from "../../util/AsyncStorage";
 
 // PROPERTY
 export const signUpUser = (user, token) => async (dispatch) => {
@@ -29,11 +33,12 @@ export const setUserame = (username, email, password) => async (dispatch) => {
 export const signInUser = (user, token) => async (dispatch) => {
   try {
     await storeData({
-      key: 'user_info',
+      key: "user_info",
       data: {
         isLogin: true,
-        user, token,
-      }
+        user,
+        token,
+      },
     });
     console.log("User from signInUser");
     console.log(user);
@@ -50,8 +55,7 @@ export const signInUser = (user, token) => async (dispatch) => {
   }
 };
 export const signOutUser = () => async (dispatch) => {
-
-  await removeStoreData('user_info')
+  await removeStoreData("user_info");
   try {
     dispatch({
       type: userTypes.SET_CURRENT_USER_OUT,
@@ -119,6 +123,77 @@ export const getPrevRoute = (value) => async (dispatch) => {
 export const resetToken = () => ({
   type: userTypes.RESET_TOKEN,
 });
+// SC begin
+export const updateSympthomAge = (age) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_SC_AGE,
+      payload: age,
+    });
+  } catch (err) {
+    console.log("error from updateSCage catch !!");
+    console.log(err);
+  }
+};
+export const updateSympthomGender = (gender) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_SC_GENDER,
+      payload: gender,
+    });
+  } catch (err) {
+    console.log("error from updateSympthomGender catch !!");
+    console.log(err);
+  }
+};
+export const updateSympthomPregnant = (pregnant) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_SC_PREGNANT,
+      payload: pregnant,
+    });
+  } catch (err) {
+    console.log("error from updateSympthomPregnant catch !!");
+    console.log(err);
+  }
+};
+export const updateSympthomCountry = (country) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_SC_COUNTRY,
+      payload: country,
+    });
+  } catch (err) {
+    console.log("error from updateSympthomCountry catch !!");
+    console.log(err);
+  }
+};
+export const updateSympthomRegion = (region) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_SC_REGION,
+      payload: region,
+    });
+  } catch (err) {
+    console.log("error from updateSympthomCountry catch !!");
+    console.log(err);
+  }
+};
+export const updateSympthomDescribe = (describe) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_SC_DESCRIBE,
+      payload: describe,
+    });
+  } catch (err) {
+    console.log("error from updateSympthomDescribe catch !!");
+    console.log(err);
+  }
+};
+export const resetSympthom = () => ({
+  type: userTypes.RESET_SC,
+});
+// SC end
 // OTHERS
 export const resetAllAuthForms = () => ({
   type: userTypes.RESET_AUTH_FORMS,

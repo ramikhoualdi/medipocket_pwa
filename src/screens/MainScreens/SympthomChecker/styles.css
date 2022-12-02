@@ -4,7 +4,7 @@
     flex-direction: column;
     background-color: #f0f4f7;
     padding: 0 30%;
-    height: 100vh;
+    height: 100%;
 }
 .age-subContainer {
     display: flex;
@@ -21,6 +21,7 @@
 }
 .age-headerSub {
     padding: 10px;
+    cursor: pointer;
 }
 .age-backIcon {
     color: #384062;
@@ -109,6 +110,8 @@
 .submit-container {
     width: 100%;
     margin: 20px 0;
+    cursor: pointer;
+    margin-bottom: 50px;
 }
 .submit1 {
     background-color: #40e0d0 ;
@@ -116,7 +119,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 8px;
+    padding: 10px;
 }
 .submit2 {
     background-color: #898C95 ;
@@ -124,7 +128,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 8px;
+    padding: 10px;
 }
 .submit-text {
     color: #ffffff;
@@ -132,4 +137,42 @@
     text-align: center;
     margin: 0;
     padding: 12px 0;
+}
+/* gender */
+.gender-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.gender-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.gender-card {
+    border-radius: 25px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.gender-card2 {
+    border-radius: 25px;
+    background-color: #384062;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.gender-icon-style {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+/* media query */
+@media only screen and (max-width: 1000px) {
+    .age-container {
+        padding: 0 25px;
+    }
 }
