@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { updateSympthomGender } from "../../../redux/User/user.actions";
 import "./styles.css";
 
 const mapState = ({ user }) => ({
   age: user.age,
-  gender: user.gender,
 });
 
 export default function Gender() {
   const navigate = useNavigate();
-  const { age, gender } = useSelector(mapState);
+  const { age } = useSelector(mapState);
   const dispatch = useDispatch();
   const [check, setCheck] = useState(false);
   const [male, setMale] = useState(false);
@@ -32,9 +31,14 @@ export default function Gender() {
     setSelected("f");
   };
   const handleSubmit = () => {
+    console.log("age from gender => ", age, typeof age);
     if (selected.length !== 0) {
       if (
-        (age == 4 || age == 7 || age == 5 || age == 8 || age == 9) &&
+        (age === "4" ||
+          age === "7" ||
+          age === "5" ||
+          age === "8" ||
+          age === "9") &&
         selected === "f"
       ) {
         dispatch(updateSympthomGender(selected));

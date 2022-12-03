@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateSympthomDescribe } from "../../../redux/User/user.actions";
 import "./styles.css";
 
-const mapState = ({ user }) => ({
-  pregnant: user.pregnant,
-});
-
 export default function Describe() {
   const navigate = useNavigate();
-  const { pregnant } = useSelector(mapState);
   const dispatch = useDispatch();
   const [check, setCheck] = useState(false);
   const [search, setSearch] = useState("");
@@ -40,9 +35,29 @@ export default function Describe() {
       });
   };
   useEffect(() => {
-    getPredictive();
+    fetch("https://apiscsandbox.isabelhealthcare.com/predictive-p", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `U7IdoNJWWzV75NZGxVGJ8KE7p0W5A1m2`,
+        // Authorization: `${ISABELL_API_KEY}`,
+      },
+    })
+      .then((response) => response.json())
+      .then((res) => {
+        console.log("response => ", res);
+        if (res?.predictive_text) setPredictive(res.predictive_text);
+      })
+      .catch((error) => {
+        console.log("error line 38 describe");
+        console.error(error);
+      });
   }, []);
   useEffect(() => {
+    // test
+    setCheck(true);
+    // test
     if (search.length > 0 && predictive.length !== 0) {
       let after = predictive.filter(checkWord);
       let array2 = [];
@@ -103,11 +118,14 @@ export default function Describe() {
   };
 
   const handleSubmit = () => {
-    if (selected.length !== 0) {
-      let ch = selected.join(",");
+    let testSelected = ["headache", "hot and cold"];
+    if (testSelected.length !== 0) {
+      // if (selected.length !== 0) {
+      // let ch = selected.join(",");
+      let ch = testSelected.join(",");
       console.log("Success !!!");
       dispatch(updateSympthomDescribe(ch));
-      navigate("result");
+      navigate("/result");
     } else {
       setSelectError("* Please enter atleast one word");
     }
@@ -166,6 +184,7 @@ export default function Describe() {
                   <img
                     src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fclose.png?alt=media&token=7179b5d1-2b8b-46ff-89b5-b6b5a474c46c"
                     className="describe-plus-icon"
+                    alt="img"
                   />
                 </div>
               ))}
@@ -177,6 +196,7 @@ export default function Describe() {
             <img
               className="describe-search-icon"
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsearch.png?alt=media&token=102ca289-8daa-42a8-bc21-02903cd95d68"
+              alt="img"
             />
             <input
               className="describe-search-input"
@@ -185,6 +205,7 @@ export default function Describe() {
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search"
               styles={style}
+              disabled={predictive.length > 0 ? false : true}
             />
             <div
               className="describe-add-btn-container"
@@ -194,6 +215,7 @@ export default function Describe() {
               <img
                 className="describe-add-btn-icon"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fplus.png?alt=media&token=f9ee0e65-92a1-4f4e-84df-a50cb981af74"
+                alt="img"
               />
             </div>
           </div>
@@ -210,6 +232,7 @@ export default function Describe() {
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fplus.png?alt=media&token=f9ee0e65-92a1-4f4e-84df-a50cb981af74"
                   className="describe-add-btn-icon"
+                  alt="img"
                 />
               </div>
             ))}

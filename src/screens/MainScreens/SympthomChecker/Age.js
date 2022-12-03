@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateSympthomAge } from "../../../redux/User/user.actions";
 import "./styles.css";
 
-const mapState = ({ user }) => ({
-  age: user.age,
-});
-
 export default function Age() {
   const navigate = useNavigate();
-  const { age } = useSelector(mapState);
   const dispatch = useDispatch();
   const [check, setCheck] = useState(false);
   const [option1, setOption1] = useState(false);

@@ -1567,13 +1567,25 @@ export default function Country() {
           alt="gender"
           className="gender-img"
         />
-        <div style={{ alignItems: "center", width: "100%", marginBottom: 50 }}>
+        <div
+          style={{
+            alignItems: "center",
+            width: "100%",
+            marginBottom: 50,
+            marginTop: 50,
+          }}
+        >
           <div>
             <p className="age-title1">Select Country</p>
             <p className="age-title2">
               Please select the country of residance or recently visited
             </p>
           </div>
+          <div className="country-flag-container"></div>
+          <p className="country-parag">Press on the flag to select a country</p>
+          {countryState !== null && (
+            <p className="country-title1">{countryState.name}</p>
+          )}
         </div>
 
         {selectError.length !== 0 ? (

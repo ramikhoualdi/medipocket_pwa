@@ -47,6 +47,7 @@ export default function Home() {
         <div className="home-headerCards">
           <div className="home-headerCard" onClick={handleSymthoms}>
             <img
+              alt="img"
               className="home-cardImg"
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Fimages%2Fright_img.png?alt=media&token=f4c52de7-4981-4bed-8877-2562c3f42881"
             />
@@ -59,6 +60,7 @@ export default function Home() {
           </div>
           <div className="home-headerCard" onClick={handleDoctors}>
             <img
+              alt="img"
               className="home-cardImg"
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Fimages%2Fleft_img.png?alt=media&token=3b1e05b7-1b30-4209-a6c2-df19582872d5"
             />
@@ -82,6 +84,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Flungs.png?alt=media&token=51b706ef-dafc-484f-954b-ab8ceba22a67"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">Oncology</p>
@@ -93,6 +96,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Fthyroid.png?alt=media&token=5ea0ce92-b936-4797-8f5c-e388bf252419"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">Endocrinology</p>
@@ -104,6 +108,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Fheart.png?alt=media&token=8d5d1ab2-5ec6-480d-b09b-105a54dd0eb1"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">Cardiology</p>
@@ -115,6 +120,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Fjoints.png?alt=media&token=0a758366-8ee0-4b67-99c0-ea8ec030c0f6"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">Rheumatology</p>
@@ -128,6 +134,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Freproductive.png?alt=media&token=c142449d-0f72-470b-9c36-a164f0133e99"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">Fertility</p>
@@ -139,6 +146,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Fanatomy.png?alt=media&token=ddd77593-c445-4112-b7e6-f87ab1ad1258"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">Plastic Surgery</p>
@@ -150,6 +158,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Fpsychology.png?alt=media&token=002d3ca4-dcf2-4180-92e0-34485613e844"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">Mental Health</p>
@@ -161,6 +170,7 @@ export default function Home() {
               <img
                 className="home-cardContainer99Img"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fbody%2Fdermis.png?alt=media&token=e7169f17-ca33-49bc-a361-9bc2019de915"
+                alt="img"
               />
             </div>
             <p className="home-menuCardTitle">More</p>

@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { updateSympthomPregnant } from "../../../redux/User/user.actions";
 import "./styles.css";
 
-const mapState = ({ user }) => ({
-  pregnant: user.pregnant,
-});
-
 export default function Pregnant() {
   const navigate = useNavigate();
-  const { pregnant } = useSelector(mapState);
   const dispatch = useDispatch();
   const [check, setCheck] = useState(false);
   const [pregnantState, setPregnantState] = useState(false);
