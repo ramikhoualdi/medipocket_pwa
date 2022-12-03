@@ -31,16 +31,6 @@ export default function Gender() {
     setCheck(true);
     setSelected("f");
   };
-  useEffect(() => {
-    if (age && gender){
-      if (
-        (age == 4 || age == 7 || age == 5 || age == 8 || age == 9) &&
-        gender === "f"
-      ) {
-        navigate("/pregnant");
-      }
-  }
-  }, [age, gender]);
   const handleSubmit = () => {
     if (selected.length !== 0) {
       if (
@@ -48,6 +38,7 @@ export default function Gender() {
         selected === "f"
       ) {
         dispatch(updateSympthomGender(selected));
+        navigate("/pregnant");
       } else {
         navigate("/country");
       }

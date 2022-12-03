@@ -1511,9 +1511,6 @@ export default function Country() {
     setCountryState(country);
     setCheck(true);
   };
-  useEffect(() => {
-    if (country && region) navigate("/describe");
-  }, [country, region]);
   const handleSubmit = () => {
     console.log("Country BROOOOOOOOOOOOOO");
     console.log(countryState);
@@ -1528,6 +1525,7 @@ export default function Country() {
       }
       dispatch(updateSympthomCountry(newCountryObj.country_id));
       dispatch(updateSympthomRegion(newCountryObj.region_id));
+      navigate("/describe");
     } else {
       setSelectError("* Select a gender is Required");
     }

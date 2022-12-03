@@ -99,12 +99,10 @@ export default function Age() {
     setCheck(true);
     setSelected("6");
   };
-  useEffect(() => {
-    if (age) navigate("/gender");
-  }, [age]);
   const handleSubmit = () => {
     if (selected.length !== 0) {
       dispatch(updateSympthomAge(selected));
+      navigate("/gender");
     } else {
       setSelectError("* Selecting an age is Required");
     }

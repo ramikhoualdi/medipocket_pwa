@@ -40,12 +40,10 @@ export default function Pregnant() {
     setSelected("n");
     setCheck(true);
   };
-  useEffect(() => {
-    if(pregnant) navigate("/country")
-  }, [pregnant])
   const handleSubmit = () => {
     if (selected.length !== 0) {
       dispatch(updateSympthomPregnant(selected))
+      navigate("/country")
     } else {
       setSelectError("* Select a gender is Required");
     }
