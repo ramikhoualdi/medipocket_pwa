@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { updateSympthomAge } from "../../../redux/User/user.actions";
 import "./styles.css";
+
+const mapState = ({ user }) => ({
+  age: user.age,
+});
 
 export default function Age() {
   const navigate = useNavigate();
+  const { age } = useSelector(mapState);
+  const dispatch = useDispatch();
   const [check, setCheck] = useState(false);
   const [option1, setOption1] = useState(false);
   const [option2, setOption2] = useState(false);
@@ -93,7 +101,8 @@ export default function Age() {
   };
   const handleSubmit = () => {
     if (selected.length !== 0) {
-      navigate("/gender", { age: selected });
+      dispatch(updateSympthomAge(selected));
+      navigate("/gender");
     } else {
       setSelectError("* Selecting an age is Required");
     }
@@ -132,6 +141,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option1 ? "age-title22" : "age-title2"}>
                 Newborn 0-28 d
@@ -149,6 +159,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option2 ? "age-title22" : "age-title2"}>
                 Infant 29 d-1 yr
@@ -166,6 +177,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option3 ? "age-title22" : "age-title2"}>
                 Younger Child 1-5 yrs
@@ -183,6 +195,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option4 ? "age-title22" : "age-title2"}>
                 Older Child 6-12 yrs
@@ -200,6 +213,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option5 ? "age-title22" : "age-title2"}>
                 Adolescent 13-16 yrs
@@ -217,6 +231,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option6 ? "age-title22" : "age-title2"}>
                 Young Adult 17-29 yrs
@@ -234,6 +249,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option7 ? "age-title22" : "age-title2"}>
                 Adult 30-39 yrs
@@ -251,6 +267,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option8 ? "age-title22" : "age-title2"}>
                 Adult 40-49 yrs
@@ -268,6 +285,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option9 ? "age-title22" : "age-title2"}>
                 Adult 40-49 yrs
@@ -285,6 +303,7 @@ export default function Age() {
               <img
                 className="age-icon2Style"
                 src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Ficons%2Fsympthom%2Fmale.png?alt=media&token=33003d87-4a93-4d0b-a26c-0222cef18505"
+                alt="img"
               />
               <p className={option10 ? "age-title22" : "age-title2"}>
                 Senior 65 yrs-over

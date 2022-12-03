@@ -5,6 +5,7 @@
     background-color: #f0f4f7;
     padding: 0 30%;
     height: 100vh;
+    position: relative;
 }
 .age-subContainer {
     display: flex;
@@ -21,6 +22,7 @@
 }
 .age-headerSub {
     padding: 10px;
+    cursor: pointer;
 }
 .age-backIcon {
     color: #384062;
@@ -48,6 +50,7 @@
     text-align: center;
 }
 .age-scrollContainer {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +65,7 @@
 }
 /* age card */
 .age-optionContent {
-    width: 100%;
+    width: 80%;
     margin-bottom: 15px;
     cursor: pointer;
 }
@@ -107,8 +110,11 @@
     margin-bottom: 10px;
 }
 .submit-container {
-    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    width: 30%;
     margin: 20px 0;
+    cursor: pointer;
 }
 .submit1 {
     background-color: #40e0d0 ;
@@ -116,7 +122,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 8px;
+    padding: 10px;
 }
 .submit2 {
     background-color: #898C95 ;
@@ -124,7 +131,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 8px;
+    padding: 10px;
 }
 .submit-text {
     color: #ffffff;
@@ -132,4 +140,129 @@
     text-align: center;
     margin: 0;
     padding: 12px 0;
+}
+/* gender */
+.gender-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.gender-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.gender-card {
+    border-radius: 25px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.gender-card2 {
+    border-radius: 25px;
+    background-color: #384062;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.gender-icon-style {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+/* describe */
+.describe-title1 {
+    color: #384062;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+}
+.describe-word-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.descibe-wordStyle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding:  8px 15px;
+    margin: 8px;
+}
+.descibe-wordStyle2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #384062;
+    padding:  5px 10px;
+    margin: 5px;
+}
+.describe-word-style2{
+    color: #B2D3F6;
+    font-size: 10px;
+}
+.describe-plus-icon{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    object-fit: contain;
+}
+.describe-search-main-container {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.describe-search-main {
+    position: relative;
+    background-color: #ffffff;
+    color: #40e0d0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.describe-search-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+.describe-search-input {
+    font-size: 18px;
+    width: 90%;
+    outline: none;
+    border: 0;
+    padding: 10px;
+}
+.describe-add-btn-container{
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    padding: 2px;
+    margin-right: 10px;
+}
+.describe-add-btn-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+/* media query */
+@media only screen and (max-width: 1000px) {
+    .age-container {
+        padding: 0 25px;
+    }
+    .submit-container {
+        width: 80%;
+    }
 }

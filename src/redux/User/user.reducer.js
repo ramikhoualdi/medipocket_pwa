@@ -11,6 +11,13 @@ const INITIAL_STATE = {
   prevRoute: null,
   token: null,
   errors: [],
+  // SC
+  age: null,
+  gender: null,
+  pregnant: null,
+  country: null,
+  region: null,
+  describe: null,
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -78,7 +85,46 @@ const userReducer = (state = INITIAL_STATE, action) => {
         ...state,
         token: null,
       };
-
+    case userTypes.UPDATE_SC_AGE:
+      return {
+        ...state,
+        age: action.payload,
+      };
+    case userTypes.UPDATE_SC_GENDER:
+      return {
+        ...state,
+        gender: action.payload,
+      };
+    case userTypes.UPDATE_SC_PREGNANT:
+      return {
+        ...state,
+        pregnant: action.payload,
+      };
+    case userTypes.UPDATE_SC_COUNTRY:
+      return {
+        ...state,
+        country: action.payload,
+      };
+    case userTypes.UPDATE_SC_REGION:
+      return {
+        ...state,
+        region: action.payload,
+      };
+    case userTypes.UPDATE_SC_DESCRIBE:
+      return {
+        ...state,
+        describe: action.payload,
+      };
+    case userTypes.RESET_SC:
+      return {
+        ...state,
+        age: null,
+        gender: null,
+        pregnant: null,
+        country: null,
+        region: null,
+        describe: null,
+      };
     // ERRORS
     case userTypes.RESET_ERRORSSTATE_FORMS:
       return {
@@ -93,7 +139,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case userTypes.RESET_STATES:
       return {
         // currentUser: false,
-        
+
         signInSuccess: false,
         signUpSuccess: false,
         resetPasswordSuccess: false,
