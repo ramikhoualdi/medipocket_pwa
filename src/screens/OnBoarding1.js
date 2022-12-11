@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const bg_url =
-  "https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Fimages%2Fbg.png?alt=media&token=a36ec316-b594-4a1a-9de5-104ed8ef3287";
+  "https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2FonBoarding1-min.png?alt=media&token=b4b8c4c3-4ffe-43d4-b14d-f3fa4cd35554";
 
 export default function OnBoarding1() {
   const navigate = useNavigate();
@@ -19,10 +19,9 @@ export default function OnBoarding1() {
         alt="logo"
       />
       <div className="onBoarding-title-container">
-        <h1 className="onBoarding-title1">Telehealth</h1>
+        <h1 className="onBoarding-title1">Second Opinion USA</h1>
         <p className="onBoarding-title2">
-          Affordable, Cross Border Care Access best qulity doctors cross border
-          24 x 7
+          Consult from India the world's best hospitals and specialists in USA
         </p>
       </div>
       <div

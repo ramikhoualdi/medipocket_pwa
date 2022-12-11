@@ -18,6 +18,11 @@ const INITIAL_STATE = {
   country: null,
   region: null,
   describe: null,
+  // doctor
+  filter: "*",
+  filterUpdateSuccess: false,
+  appointment: null,
+  appointmentUpdateSuccess: false,
 };
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -85,6 +90,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
         ...state,
         token: null,
       };
+    // SC
     case userTypes.UPDATE_SC_AGE:
       return {
         ...state,
@@ -125,6 +131,37 @@ const userReducer = (state = INITIAL_STATE, action) => {
         region: null,
         describe: null,
       };
+    // DOCTOR
+    case userTypes.UPDATE_DOCTOR_FILTER:
+      return {
+        ...state,
+        filter: action.payload,
+        filterUpdateSuccess: true,
+      };
+    case userTypes.RESET_DOCTORS_FILTER_SUCCESS:
+      return {
+        ...state,
+        filterUpdateSuccess: false,
+      };
+    case userTypes.UPDATE_DOCTOR_APPOINTMENT:
+      return {
+        ...state,
+        appointment: action.payload,
+        appointmentUpdateSuccess: true,
+      };
+    case userTypes.RESET_DOCTORS_APPOINTMENT_SUCCESS:
+      return {
+        ...state,
+        appointmentUpdateSuccess: false,
+      };
+    case userTypes.RESET_DOCTORS:
+      return {
+        ...state,
+        filter: "*",
+        filterUpdateSuccess: false,
+        appointment: null,
+        appointmentUpdateSuccess: false,
+      };
     // ERRORS
     case userTypes.RESET_ERRORSSTATE_FORMS:
       return {
@@ -139,7 +176,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
     case userTypes.RESET_STATES:
       return {
         // currentUser: false,
-
         signInSuccess: false,
         signUpSuccess: false,
         resetPasswordSuccess: false,

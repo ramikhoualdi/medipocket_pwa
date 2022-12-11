@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const bg_url =
-  "https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Fimages%2Fbg1.png?alt=media&token=6491998f-fdb1-4db2-965b-3e6a2e5c4ced";
+  "https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2FonBoarding2-min.png?alt=media&token=d5ee09e5-8207-4af4-9b72-2189cd4674b8";
 
 export default function OnBoarding2() {
   const navigate = useNavigate();
@@ -19,10 +19,10 @@ export default function OnBoarding2() {
         alt="logo"
       />
       <div className="onBoarding-title-container">
-        <h1 className="onBoarding-title1">Dr. AI</h1>
+        <h1 className="onBoarding-title1">Treatment In USA</h1>
         <p className="onBoarding-title2">
-          Personalized AI Powered Symptom Checker Check your symtoms on a
-          medically designed engineering powered platform 24 x 7 for FREE
+          At best USA hospitals, MayoClinic, MD Anderson, John Hopkins, Boston
+          Children Hospital
         </p>
       </div>
       <div

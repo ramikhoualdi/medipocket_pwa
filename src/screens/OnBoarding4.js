@@ -2,9 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const bg_url =
-  "https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2FonBoarding3-min.png?alt=media&token=6c603ac3-5947-4c16-b51b-822c2b937382";
+  "https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/assets%2Fimages%2Fbg1.png?alt=media&token=6491998f-fdb1-4db2-965b-3e6a2e5c4ced";
 
-export default function OnBoarding3() {
+export default function OnBoarding4() {
   const navigate = useNavigate();
   return (
     <div
@@ -19,16 +19,14 @@ export default function OnBoarding3() {
         alt="logo"
       />
       <div className="onBoarding-title-container">
-        <h1 className="onBoarding-title1">Surrogacy In USA</h1>
+        <h1 className="onBoarding-title1">DR. AI</h1>
         <p className="onBoarding-title2">
-          Best Success rate, gender selection, genetic screening, USA passport
+          Check your symptoms 24x7 for FREE with personalized AI powered
+          medically designed symptom checker
         </p>
       </div>
-      <div
-        className="onBoarding-next-btn shadow1"
-        onClick={() => navigate("/onBoarding4")}
-      >
-        Next
+      <div className="onBoarding-next-btn" onClick={() => navigate("/home")}>
+        Let's Start
       </div>
     </div>
   );

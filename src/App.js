@@ -5,7 +5,9 @@ import Splash from "./screens/Splash";
 import OnBoarding1 from "./screens/OnBoarding1";
 import OnBoarding2 from "./screens/OnBoarding2";
 import OnBoarding3 from "./screens/OnBoarding3";
+import OnBoarding4 from "./screens/OnBoarding4";
 import Home from "./screens/MainScreens/Home";
+import HomePage from "./screens/MainScreens/HomePage";
 import Doctors from "./screens/MainScreens/Doctors";
 import DoctorList from "./screens/MainScreens/Doctor/DoctorList";
 import Appointment from "./screens/MainScreens/Doctor/Appointment";
@@ -56,8 +58,10 @@ function App() {
             <Route path="onBoarding1" element={<OnBoarding1 />} />
             <Route path="onBoarding2" element={<OnBoarding2 />} />
             <Route path="onBoarding3" element={<OnBoarding3 />} />
+            <Route path="onBoarding4" element={<OnBoarding4 />} />
             {/* Main */}
-            <Route path="home" element={<Home />} />
+            {/* <Route path="home" element={<Home />} /> */}
+            <Route path="home" element={<HomePage />} />
             <Route path="doctors" element={<Doctors />} />
             {/* Doctor */}
             <Route path="doctorList" element={<DoctorList />} />

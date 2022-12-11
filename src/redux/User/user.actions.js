@@ -194,6 +194,39 @@ export const resetSympthom = () => ({
   type: userTypes.RESET_SC,
 });
 // SC end
+// DOCTORS begin
+export const updateDoctorFilter = (filter) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_DOCTOR_FILTER,
+      payload: filter,
+    });
+  } catch (err) {
+    console.log("error from updateDoctorFilter catch !!");
+    console.log(err);
+  }
+};
+export const resetFilterSuccess = () => ({
+  type: userTypes.RESET_DOCTORS_FILTER_SUCCESS,
+});
+export const updateDoctorAppointment = (appointment) => async (dispatch) => {
+  try {
+    dispatch({
+      type: userTypes.UPDATE_DOCTOR_APPOINTMENT,
+      payload: appointment,
+    });
+  } catch (err) {
+    console.log("error from updateDoctorAppointment catch !!");
+    console.log(err);
+  }
+};
+export const resetAppointmentSuccess = () => ({
+  type: userTypes.RESET_DOCTORS_APPOINTMENT_SUCCESS,
+});
+export const resetDotors = () => ({
+  type: userTypes.RESET_DOCTORS,
+});
+// DOCTORS end
 // OTHERS
 export const resetAllAuthForms = () => ({
   type: userTypes.RESET_AUTH_FORMS,

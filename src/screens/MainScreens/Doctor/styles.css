@@ -173,6 +173,53 @@
     margin: 0;
     padding: 12px 0;
 }
+/* doctor List */
+.searchMain {
+padding: 10px 20px;
+}
+.searchContainer {
+    width: 100%;
+    background-color: #ffffff;
+    /* color: #40e0d0; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.searchContainer1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.saerch {
+width: 20px;
+height: 20px;
+margin-right: 10px;
+object-fit: contain;
+}
+.searchInput {
+font-size: 18px;
+margin-right: 10px;
+color: #6E8FA3;
+}
+.searchInput1 {
+font-size: 18px;
+font-weight: 700;
+}
+.specContainer {
+    margin: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+.specTitle{
+    font-size: 22px;
+    font-weight: 700;
+    color: #3C4248;
+    max-width: 80%;
+}
+/* doctor List */
 /* media query */
 @media only screen and (max-width: 1000px) {
     .age-container {

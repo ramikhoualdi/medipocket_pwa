@@ -44,7 +44,7 @@ export default function Pregnant() {
     }
   };
   return (
-    <div className="age-container">
+    <div className="age-container" style={{ height: "100vh" }}>
       {/* subContainer */}
       <div className="age-subContainer">
         <div className="age-header">

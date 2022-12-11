@@ -206,27 +206,7 @@ export default function IntakeForm() {
     if (appointment2) appointment += "4-7 Days";
     if (appointment3) appointment += "Morning India time: 5.30am - 10am";
     if (appointment4) appointment += "Evening India time: 5.30pm - 12am";
-    if (
-      name.length === 0 ||
-      birth.length === 0 ||
-      gender.length === 0 ||
-      phone.length === 0 ||
-      f4.length === 0 ||
-      father.length === 0 ||
-      mother.length === 0 ||
-      brother.length === 0 ||
-      sister.length === 0 ||
-      medication.length === 0 ||
-      allergies.length === 0 ||
-      exercices.length === 0 ||
-      alcohol.length === 0 ||
-      smoke.length === 0 ||
-      f3.length === 0 ||
-      q1.length === 0 ||
-      q2.length === 0 ||
-      q3.length === 0 ||
-      appointment.length === 0
-    ) {
+    if (phone.length === 0 || f3.length === 0) {
       setHelp2(true);
     } else {
       // await fetch("https://app.medipocket.world/intake/", {
@@ -622,7 +602,7 @@ export default function IntakeForm() {
               </p>
               <input
                 className="intake-input intake-input-with-label"
-                value={father}
+                value={brother}
                 onChange={(e) => setBrother(e.target.value)}
                 placeholder="Brother (s)"
               />
@@ -633,7 +613,7 @@ export default function IntakeForm() {
               </p>
               <input
                 className="intake-input intake-input-with-label"
-                value={father}
+                value={sister}
                 onChange={(e) => setSister(e.target.value)}
                 placeholder="Sister (s)"
               />
