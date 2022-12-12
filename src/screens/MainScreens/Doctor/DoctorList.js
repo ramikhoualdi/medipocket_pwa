@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "../../Components/Header";
 import { useNavigate } from "react-router-dom";
 import DoctorCardModel2 from "../../Components/Models/DoctorCardModel2";
+import "./styles.css";
 
 const mapState = ({ user }) => ({
   filter: user.filter,
@@ -180,6 +181,8 @@ export default function DoctorList() {
           bg="#f0f4f7"
           isHome={false}
           isDoctorList={true}
+          isProfile={false}
+          isSurrogacy={false}
         />
         {/* filter */}
         <div className="searchMain">
@@ -260,6 +263,34 @@ export default function DoctorList() {
           </div>
         ) : null} */}
         {/* filter Modal */}
+        {filterModal && (
+          <div className="filter-model">
+            <div className="model-content shadow1">
+              <div
+                onClick={() => setFilterModal(false)}
+                className="close-model"
+              >
+                <p className="close-text">X</p>
+              </div>
+              <div className="ModelTitleView">
+                <p className="model-title-text">Specializations</p>
+              </div>
+              {specList &&
+                specList.map((item, index) => (
+                  <div className="optionContent" key={index}>
+                    <div className="optionContainer">
+                      <div
+                        className="doctor-model-card-by-model shadow1"
+                        onPress={() => handleSlected(item)}
+                      >
+                        <p className="sumpthom-model">{item}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

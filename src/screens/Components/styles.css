@@ -217,26 +217,26 @@
     color: #384062;
 }
 .fees-box {
-    padding:15px 30px;
+    padding:10px 30px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 120px;
+    width: 80px;
     background-color: #ffffff;
 }
 .boxNb {
     font-weight: 800;
-    font-size: 36px;
+    font-size: 26px;
     line-height: 18px;
     margin-top: 5px;
 }
 /* DoctorCrdModel2 */
 .doctorCard2 {
     position: relative;
-    margin-top: 20px;
-    width: 100%;
+    margin-top: 50px;
+    width: 95%;
     margin-bottom: 20px;
 }
 .imgContainer {

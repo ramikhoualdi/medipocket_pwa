@@ -4,6 +4,17 @@ import {
   removeStoreData,
   getStorage,
 } from "../../util/AsyncStorage";
+import { auth } from "../../firebase/utils";
+import { RecaptchaVerifier } from "firebase/auth";
+
+// phone Number
+export const VerifyPhoneNumber = () => async (dispatch) => {
+  try {
+    console.log("hello");
+  } catch (error) {
+    console.log("error from VerifyPhoneNumber =>", error);
+  }
+};
 
 // PROPERTY
 export const signUpUser = (user, token) => async (dispatch) => {

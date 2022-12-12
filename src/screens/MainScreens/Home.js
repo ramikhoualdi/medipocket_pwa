@@ -43,7 +43,14 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="home-subContainer">
-        <Header navigate={navigate} bg="" isHome={true}  isDoctorList={false}/>
+        <Header
+          navigate={navigate}
+          bg=""
+          isHome={true}
+          isDoctorList={false}
+          isProfile={false}
+          isSurrogacy={false}
+        />
         <div className="home-headerCards">
           <div className="home-headerCard" onClick={handleSymthoms}>
             <img

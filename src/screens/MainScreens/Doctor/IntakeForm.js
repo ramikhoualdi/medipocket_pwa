@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import "./styles.css";
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { auth } from "../../../firebase/utils";
 
 const mapState = ({ user }) => ({
   doctorName: user.doctorName,
@@ -17,11 +19,14 @@ export default function IntakeForm() {
   const [modalHome, setModalHome] = useState(false);
   const [modalBack, setModalBack] = useState(false);
 
+  const [codeFromUser, setCodeFromUser] = useState("");
+  const [phoneVerified, setPhoneVerified] = useState(false);
+  const [errorsOfUser, setErrorsOfUser] = useState("");
   // f2
   const [name, setName] = useState("");
   const [birth, setBirth] = useState("");
   const [gender, setGender] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState("+21629738044");
   // f3
   const [f3, setF3] = useState("");
   // f4
@@ -207,9 +212,11 @@ export default function IntakeForm() {
     if (appointment3) appointment += "Morning India time: 5.30am - 10am";
     if (appointment4) appointment += "Evening India time: 5.30pm - 12am";
     if (phone.length === 0 || f3.length === 0) {
-      setHelp2(true);
+      setErrorsOfUser(
+        "Phone Number and Reason for consultation are required! PLease try again!"
+      );
+      // setHelp2(true);
     } else {
-      // await fetch("https://app.medipocket.world/intake/", {
       await fetch("https://app.medipocket.world/intake_form/", {
         method: "POST",
         headers: {
@@ -255,6 +262,50 @@ export default function IntakeForm() {
 
     setIndicatorLoad(false);
   };
+
+  const checkCode = (confirmationResult) => {
+    confirmationResult
+      .confirm(codeFromUser)
+      .then((result) => {
+        // User signed in successfully.
+        const user = result.user;
+        // ...
+      })
+      .catch((error) => {
+        // User couldn't sign in (bad verification code?)
+        // ...
+      });
+  };
+  const onSignInSubmit = (response) => {
+    try {
+      console.log("Response ::::::", response);
+      const appVerifier = window.recaptchaVerifier;
+      signInWithPhoneNumber(auth, phone, appVerifier)
+        .then((confirmationResult) => {
+          checkCode(confirmationResult);
+        })
+        .catch((error) => {
+          console.log("Error; SMS not sent", error);
+        });
+    } catch (error) {
+      console.log("error line 265 => ", error);
+    }
+  };
+
+  const handleVerifyPhone = () => {
+    window.recaptchaVerifier = new RecaptchaVerifier(
+      "sign-in-button",
+      {
+        size: "invisible",
+        callback: (response) => {
+          console.log("response line 297 => ", response);
+          onSignInSubmit(response);
+        },
+      },
+      auth
+    );
+  };
+
   return (
     <div className="age-container">
       {/* subContainer */}
@@ -315,13 +366,75 @@ export default function IntakeForm() {
                 <p className="intake-error">{genderError}</p>
               )}
             </div>
-            <div className="intake-input-container">
-              <input
-                className="intake-input"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="PhoneNumber"
-              />
+            <div
+              className="intake-input-container"
+              style={{ position: "relative" }}
+            >
+              {errorsOfUser.length > 0 ? (
+                <>
+                  <input
+                    className="intake-input intake-error-field"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="PhoneNumber"
+                  />
+                  <div style={{ width: "100%" }}>
+                    <p
+                      style={{
+                        color: "red",
+                        fontSize: "10px",
+                        margin: "5px 0",
+                      }}
+                    >
+                      * Phone Number and verification Required !
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <input
+                  className="intake-input"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="PhoneNumber"
+                />
+              )}
+
+              <div
+                id="sign-in-button"
+                style={{
+                  width: "80px",
+                  backgroundColor: "#384062",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0px",
+                  position: "absolute",
+                  top: errorsOfUser.length > 0 ? 22 : 20,
+                  right: 4,
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+                onClick={handleVerifyPhone}
+              >
+                <p
+                  style={{
+                    fontSize: 16,
+                    color: "#ffffff",
+                    lineHeight: "6px",
+                    padding: "0px",
+                  }}
+                >
+                  Verify
+                </p>
+              </div>
+              {phoneVerified && (
+                <input
+                  className="intake-input"
+                  value={codeFromUser}
+                  onChange={(e) => setCodeFromUser(e.target.value)}
+                  placeholder="Code"
+                />
+              )}
               {phoneError.length === 0 ? null : (
                 <p className="intake-error">{phoneError}</p>
               )}
@@ -739,12 +852,30 @@ export default function IntakeForm() {
         <div className="intake-card shadow1">
           <p className="intake-card-title">Reason For Consulting The Doctor</p>
           <div className="intake-inputs-container">
-            <input
-              className="intake-input"
-              value={f3}
-              onChange={(e) => setF3(e.target.value)}
-              placeholder="Reason for consulting the doctor"
-            />
+            {errorsOfUser.length > 0 ? (
+              <>
+                <input
+                  className="intake-input intake-error-field"
+                  value={f3}
+                  onChange={(e) => setF3(e.target.value)}
+                  placeholder="Reason for consulting the doctor"
+                />
+                <div style={{ width: "100%" }}>
+                  <p
+                    style={{ color: "red", fontSize: "10px", margin: "5px 0" }}
+                  >
+                    * The reason for consulting the doctor is Required !
+                  </p>
+                </div>
+              </>
+            ) : (
+              <input
+                className="intake-input"
+                value={f3}
+                onChange={(e) => setF3(e.target.value)}
+                placeholder="Reason for consulting the doctor"
+              />
+            )}
           </div>
         </div>
         {/* Top 3 questions */}
@@ -843,7 +974,26 @@ export default function IntakeForm() {
             </div>
           </div>
         </div>
-        <div className={"submit-container2 submit1"} onClick={handleSubmit}>
+        {errorsOfUser.length > 0 && (
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p style={{ color: "red", fontSize: "14px", margin: "20px" }}>
+              {errorsOfUser}{" "}
+            </p>
+          </div>
+        )}
+        <div
+          className={"submit-container2 submit1"}
+          style={{ cursor: "pointer" }}
+          onClick={handleSubmit}
+        >
           <p className="submit-text">Submit</p>
         </div>
       </div>

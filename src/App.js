@@ -9,6 +9,7 @@ import OnBoarding4 from "./screens/OnBoarding4";
 import Home from "./screens/MainScreens/Home";
 import HomePage from "./screens/MainScreens/HomePage";
 import Doctors from "./screens/MainScreens/Doctors";
+import Surrogacy from "./screens/MainScreens/Surrogacy";
 import DoctorList from "./screens/MainScreens/Doctor/DoctorList";
 import Appointment from "./screens/MainScreens/Doctor/Appointment";
 import Payments from "./screens/MainScreens/Doctor/Payments";
@@ -30,6 +31,7 @@ import Call from "./screens/MainScreens/Profile/Call";
 import Drawer from "./screens/Components/Drawer";
 import { useSelector } from "react-redux";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import Hospitals from "./screens/MainScreens/Hospitals";
 
 const cache = new InMemoryCache();
 // Initialize Apollo Client
@@ -63,6 +65,8 @@ function App() {
             {/* <Route path="home" element={<Home />} /> */}
             <Route path="home" element={<HomePage />} />
             <Route path="doctors" element={<Doctors />} />
+            <Route path="surrogacy" element={<Surrogacy />} />
+            <Route path="hospitals" element={<Hospitals />} />
             {/* Doctor */}
             <Route path="doctorList" element={<DoctorList />} />
             <Route path="appointment" element={<Appointment />} />

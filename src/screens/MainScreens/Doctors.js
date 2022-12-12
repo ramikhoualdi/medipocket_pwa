@@ -128,7 +128,14 @@ export default function Doctors() {
   return (
     <div className="age-container">
       <div className="home-subContainer">
-        <Header navigate={navigate} bg="#f0f4f7" isHome={false} isDoctorList={false} />
+        <Header
+          navigate={navigate}
+          bg="#f0f4f7"
+          isHome={false}
+          isDoctorList={false}
+          isProfile={false}
+          isSurrogacy={false}
+        />
         {/* scroll */}
         <div className="age-scrollContainer">
           <div className="intake-card shadow1">
