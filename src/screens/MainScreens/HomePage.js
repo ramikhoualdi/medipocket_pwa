@@ -114,6 +114,11 @@ export default function HomePage() {
             src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2Fcovid-coronavirus-outbreak-healthcare-workers-and-pandemic-concept-middleaged-doctor-in-white-coat-c%201.png?alt=media&token=ca0f7758-1dc2-4be3-b017-c09925769204"
             className="absImg"
           />
+          <img
+            alt=""
+            src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhospitals%2Frami1.png?alt=media&token=cf611012-d8cf-4442-9fa4-c6b497357ebe"
+            className=""
+          />
           <div className="homeComponentContent">
             <h3>USA Specialists</h3>
             <p>Virtual Consultation USA Doctors</p>
