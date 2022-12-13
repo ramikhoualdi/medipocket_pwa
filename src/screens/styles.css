@@ -255,3 +255,274 @@
 .shadow1 {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
 }
+
+.homeTitle
+{
+    text-align: center;
+}
+.homeTitle span{
+text-decoration: underline;
+text-decoration-color: #29ddc6;
+}
+.firstBlocWrapper{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+}
+.homeComponent{
+    width: 46%;
+    height: 180px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.homeComponentContent{
+    background: white;
+    z-index: 2;
+    position: relative;
+    color: #000;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 0;
+    padding-left: 12px;
+    width: 100%;
+    opacity: 0.8;
+}
+.homeComponentContent h3
+{
+    margin: 0;
+    font-size: 16px;
+}
+
+.homeComponentContent p
+{
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.absImg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 159px;
+    width:109px;
+    border-radius: 20px;
+    object-fit: contain;
+
+}
+
+.secondBlocWrapper{
+/* text-align: center; */
+}
+.secondBlocWrapper{
+
+}
+
+.secondBlocSubWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.secBlocElement{
+    width: 31%;
+    height: 150px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.marRight3Percent{
+    margin-right: 3.33333%;
+}
+.secImg{
+    width: 100px;
+    height: 100px;
+}
+.thirdBlocWrapper{
+    overflow: scroll;
+    margin-bottom: 20px;
+
+}
+.thirdBlocWrapper h2{
+ 
+
+}
+.thirdBlocSubWrapper
+{
+    display: flex;
+}
+.thirdBlocElement
+{
+    width: 200px;
+    margin: 0 20px;
+    height: 200px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    border-radius: 20px;
+}
+
+.thirdBlocElement .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdImg{
+    width: 80px;
+    height: 80px;
+}
+
+.thirdBlocElement .content h4{
+    margin: 0;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+.fourthBlocWrapper{
+    /* overflow: scroll; */
+    margin-bottom: 30px;
+
+}
+.fourthBlocWrapper h2{
+ 
+
+}
+.fourthBlocSubWrapper
+{
+    display: flex;
+    overflow: scroll;
+}
+.fourthBlocElement
+{
+    width: 200px;
+    margin: 0 20px;
+    height: 200px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    border-radius: 20px;
+}
+
+.fourthBlocElement .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourthImg{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.fourthBlocElement .content h4{
+    margin: 0;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.fourthBlocElement .content p{   
+     margin: 0;
+    font-size: 14px;
+}
+
+.greenBtn{
+    background-color: #44dbc8;
+    border: none;
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lastBloc .content{
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.lastBloc{
+    margin-bottom: 20px;
+}
+
+
+.topHosBlocElement
+{
+    width: 45%;
+    margin: 10px 2.5%;
+    height: 200px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    border-radius: 20px;
+}
+
+.topHosBlocElement .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.topHosBlocElement .content h4{
+    margin: 0;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.topHosBlocElement .content p{   
+     margin: 0;
+    font-size: 14px;
+}
+
+.blocsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.topHosBlocElement img{
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+
+
+.greenBtn .iconImg{
+    object-fit: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.greenBtn p{
+    margin: 0;
+}
+
+.greenBtn .arraowImg{
+    object-fit: cover;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+}

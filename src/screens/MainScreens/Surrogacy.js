@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
-import { IoMdArrowBack, IoMdMenu } from "react-icons/io";
+import { IoMdArrowBack } from "react-icons/io";
 
 const icons = [
   {

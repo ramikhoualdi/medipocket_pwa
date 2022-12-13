@@ -33,6 +33,7 @@ import { useSelector } from "react-redux";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Hospitals from "./screens/MainScreens/Hospitals";
 import Bottomtab from "./screens/Components/Bottomtab";
+import TopUsaHospitals from "./screens/MainScreens/TopUsaHospitals";
 
 const cache = new InMemoryCache();
 // Initialize Apollo Client
@@ -66,6 +67,7 @@ function App() {
             {/* Main */}
             {/* <Route path="home" element={<Home />} /> */}
             <Route path="home" element={<HomePage />} />
+            <Route path="topusahospitals" element={<TopUsaHospitals />} />
             <Route path="doctors" element={<Doctors />} />
             <Route path="surrogacy" element={<Surrogacy />} />
             <Route path="hospitals" element={<Hospitals />} />

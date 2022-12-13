@@ -23,6 +23,20 @@
     color: #384062;
     margin-top: 10px;
 }
+.home-logo-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+.home-logo-logo-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* header */
 .home-container {
     display: flex;
