@@ -110,9 +110,15 @@ export default function HomePage() {
       <div className="firstBlocWrapper">
         <div className="homeComponent">
           <img
-            alt=""
-            src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2Fcovid-coronavirus-outbreak-healthcare-workers-and-pandemic-concept-middleaged-doctor-in-white-coat-c%201.png?alt=media&token=ca0f7758-1dc2-4be3-b017-c09925769204"
-            className="absImg"
+            src={process.env.PUBLIC_URL + "/icons/p1.jpg"}
+            alt="img"
+            className="bgImgHome1"
+            style={{ width: "105%", height: "105%" }}
+          />
+          <img
+            src={process.env.PUBLIC_URL + "/icons/m1.png"}
+            alt="img"
+            className="bgImgHome2"
           />
           <div className="homeComponentContent">
             <h3>USA Specialists</h3>
@@ -121,9 +127,15 @@ export default function HomePage() {
         </div>
         <div className="homeComponent">
           <img
-            alt=""
-            src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FBHCS_BedTowerExpansion_Miami_02-222%201.png?alt=media&token=bbb110c7-d23c-4f43-a8e7-75a9c46484dc"
-            className="absImg"
+            src={process.env.PUBLIC_URL + "/icons/p2.png"}
+            alt="img"
+            className="bgImgHome1"
+            style={{ width: "100%", height: "100%" }}
+          />
+          <img
+            src={process.env.PUBLIC_URL + "/icons/m2.png"}
+            alt="img"
+            className="bgImgHome2"
           />
           <div className="homeComponentContent">
             <h3>USA Hospitals</h3>
@@ -132,9 +144,15 @@ export default function HomePage() {
         </div>
         <div className="homeComponent">
           <img
-            alt=""
-            src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2Flittle-girl-climbing-in-a-laundry-baske55t%201.png?alt=media&token=c05b3f90-3193-41e2-b571-2f16a172654d"
-            className="absImg"
+            src={process.env.PUBLIC_URL + "/icons/p3.png"}
+            alt="img"
+            className="bgImgHome1"
+            style={{ width: "100%", height: "100%" }}
+          />
+          <img
+            src={process.env.PUBLIC_URL + "/icons/m3.png"}
+            alt="img"
+            className="bgImgHome2"
           />
           <div className="homeComponentContent">
             <h3>Surrogacy - IVF</h3>
@@ -143,9 +161,15 @@ export default function HomePage() {
         </div>
         <div className="homeComponent">
           <img
-            alt=""
-            src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2Fshutterstock_560047702%201.png?alt=media&token=4e23f1a9-e586-4ad9-a67d-dfc5abe27226"
-            className="absImg"
+            src={process.env.PUBLIC_URL + "/icons/p4.png"}
+            alt="img"
+            className="bgImgHome1"
+            style={{ width: "100%", height: "100%" }}
+          />
+          <img
+            src={process.env.PUBLIC_URL + "/icons/m4.png"}
+            alt="img"
+            className="bgImgHome2"
           />
           <div className="homeComponentContent">
             <h3>Dr. AI</h3>
@@ -156,14 +180,14 @@ export default function HomePage() {
       <div className="secondBlocWrapper">
         <h2>Top USA Hospitals</h2>
         <div className="secondBlocSubWrapper">
-          <div className="secBlocElement marRight3Percent">
+          <div className="secBlocElement">
             <img
               alt=""
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FRectangle%202887.png?alt=media&token=15230067-798e-4955-8fa2-94a3f7aef135"
               className="secImg"
             />
           </div>
-          <div className="secBlocElement marRight3Percent">
+          <div className="secBlocElement">
             <img
               alt=""
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FRectangle%202887%20(1).png?alt=media&token=e8238509-42d5-4705-84e5-d2f25946de49"
@@ -177,14 +201,16 @@ export default function HomePage() {
               className="secImg"
             />
           </div>
-          <div className="secBlocElement marRight3Percent">
+        </div>
+        <div className="secondBlocSubWrapper">
+          <div className="secBlocElement">
             <img
               alt=""
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
               className="secImg"
             />
           </div>
-          <div className="secBlocElement marRight3Percent">
+          <div className="secBlocElement">
             <img
               alt=""
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
