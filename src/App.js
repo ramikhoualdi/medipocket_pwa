@@ -32,6 +32,7 @@ import Drawer from "./screens/Components/Drawer";
 import { useSelector } from "react-redux";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Hospitals from "./screens/MainScreens/Hospitals";
+import Bottomtab from "./screens/Components/Bottomtab";
 
 const cache = new InMemoryCache();
 // Initialize Apollo Client
@@ -47,6 +48,7 @@ function App() {
       <div>
         <Drawer />
         <Outlet />
+        <Bottomtab />
       </div>
     );
   };

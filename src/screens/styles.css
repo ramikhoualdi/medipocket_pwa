@@ -6,7 +6,6 @@
     align-items:center;
     justify-content:center;
     background-color: #40e0d0;
-    
 }
 .splash-logo {
     width: 20vw;
@@ -14,7 +13,6 @@
     min-width: 150px;
     min-height: 150px;
     object-fit: contain;
-
 }
 /* onBoarding1 Screen */
 .onBoarding-container {
@@ -28,7 +26,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .onBoarding-logo {
     width: 6vw;
@@ -36,23 +33,25 @@
     min-width: 150px;
     min-height: 150px;
     object-fit: contain;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 .onBoarding-title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 100px;
 }
 .onBoarding-title1 {
     text-align: center;
     color: #ffffff;
-    font-size: 36px;
+    font-size: 24px;
 }
 .onBoarding-title2 {
     text-align: center;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 16px;
     max-width: 80%;
 }
 .onBoarding-next-btn {

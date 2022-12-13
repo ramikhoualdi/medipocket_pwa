@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Header from "./../Components/Header";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
+import { IoMdArrowBack, IoMdMenu } from "react-icons/io";
 
 const icons = [
   {
@@ -70,16 +70,16 @@ const icons = [
 export default function Surrogacy() {
   const navigate = useNavigate();
   return (
-    <div className="age-container">
+    <div className="age-container" style={{ backgroundColor: "#F5F5F5" }}>
       <div className="home-subContainer">
-        <Header
-          navigate={navigate}
-          bg="#f0f4f7"
-          isHome={false}
-          isDoctorList={false}
-          isProfile={false}
-          isSurrogacy={true}
-        />
+        {/* Header */}
+        <div className="header-surrogacy">
+          <div className="header-surrogacy-left" onClick={() => navigate(-1)}>
+            <IoMdArrowBack className="header-surrogacy-iconStyle" />
+          </div>
+          <p className="header-surrogacy-text">Bring your baby home</p>
+          <div style={{ width: "20px" }} />
+        </div>
         {/* section 1 */}
         <div className="surrogacy-section1-container">
           <div className="surrogacy-section1-container-content">
@@ -212,7 +212,7 @@ export default function Surrogacy() {
             <p className="surrogacy-section2-container-title1">
               8 Steps of the Surrogacy Process in USA
             </p>
-            <div className="green-underline" />
+            <div className="green-underline" style={{ marginBottom: "30px" }} />
             {/* 1 */}
             <div className="surrogacy-section2-container-row">
               <p className="surrogacy-section2-container-title2">1</p>
@@ -323,22 +323,22 @@ export default function Surrogacy() {
         {/* Section 4 */}
         <div
           className="surrogacy-section2-container"
-          style={{ marginTop: "0px", marginBottom: "20px" }}
+          style={{ marginTop: "20px", marginBottom: "20px" }}
         >
-          <div className="surrogacy-section2-container-content">
+          <div
+            className="surrogacy-section2-container-content"
+            style={{ padding: "0px" }}
+          >
             <p
               className="surrogacy-section2-container-title1"
               style={{ marginBottom: "10px" }}
             >
               USA Surrogacy
             </p>
-            <p
-              className="surrogacy-section2-container-title1"
-              style={{ marginBottom: "40px" }}
-            >
+            <p className="surrogacy-section2-container-title1">
               for International Intended Parents
             </p>
-            <div className="surrogacy-section1-container-content">
+            <div className="surrogacy-section4-container-content">
               <div className="surrogacy-section4-container-img-container shadow1">
                 <img
                   src={icons[2].img}
@@ -370,12 +370,15 @@ export default function Surrogacy() {
         {/* Section 6 */}
         <div
           className="surrogacy-section2-container"
-          style={{ marginTop: "0px", marginBottom: "100px" }}
+          style={{ marginTop: "20px", marginBottom: "100px" }}
         >
-          <div className="surrogacy-section2-container-content">
+          <div
+            className="surrogacy-section2-container-content"
+            style={{ padding: "0px" }}
+          >
             <p
               className="surrogacy-section2-container-title1"
-              style={{ marginBottom: "40px" }}
+              style={{ marginBottom: "0px" }}
             >
               Parenthood is for Everyone
             </p>
