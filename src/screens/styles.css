@@ -284,7 +284,7 @@ text-decoration-color: #29ddc6;
 .bgImgHome1 {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 20px;
     position: absolute;
     left: 0;
@@ -294,7 +294,7 @@ text-decoration-color: #29ddc6;
 .bgImgHome2 {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 20px;
     position: absolute;
     left: 0;
@@ -309,7 +309,7 @@ text-decoration-color: #29ddc6;
     color: #000;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 10px 0;
+    padding: 4px 0;
     padding-left: 12px;
     width: 100%;
     opacity: 0.8;
@@ -323,7 +323,7 @@ text-decoration-color: #29ddc6;
 .homeComponentContent p
 {
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
@@ -385,9 +385,9 @@ text-decoration-color: #29ddc6;
 }
 .thirdBlocElement
 {
-    width: 200px;
-    margin: 0 20px;
-    height: 200px;
+    width: 150px;
+    margin: 10px;
+    height: 150px;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -404,8 +404,9 @@ text-decoration-color: #29ddc6;
 }
 
 .thirdImg{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
 .thirdBlocElement .content h4{
@@ -431,9 +432,9 @@ text-decoration-color: #29ddc6;
 }
 .fourthBlocElement
 {
-    width: 200px;
-    margin: 0 20px;
-    height: 200px;
+    width: 170px;
+    margin: 10px;
+    height: 170px;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -459,6 +460,7 @@ text-decoration-color: #29ddc6;
     margin: 0;
     font-weight: 600;
     margin-top: 10px;
+    font-size: 12px;
 }
 .fourthBlocElement .content p{   
      margin: 0;
@@ -477,15 +479,19 @@ text-decoration-color: #29ddc6;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .lastBloc .content{
     background: #fff;
-    padding: 10px;
+    padding: 15px;
     border-radius: 15px;
+}
+.lastBloc .content p{
+    font-size: 12px;
 }
 
 .lastBloc{
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 
@@ -534,18 +540,27 @@ text-decoration-color: #29ddc6;
 
 
 .greenBtn .iconImg{
-    object-fit: cover;
-    width: 20px;
-    height: 20px;
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
 }
 .greenBtn p{
     margin: 0;
+    font-size: 18px;
 }
 
 .greenBtn .arraowImg{
     object-fit: cover;
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     margin-left: 10px;
+}
+
+
+.shadowHome{
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.1));
+}
+.mg80{
+    margin-bottom: 80px;
 }

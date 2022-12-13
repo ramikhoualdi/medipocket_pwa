@@ -83,14 +83,14 @@ export default function Surrogacy() {
         {/* section 1 */}
         <div className="surrogacy-section1-container">
           <div className="surrogacy-section1-container-content">
-            <div className="surrogacy-section1-container-img-container shadow1">
+            <div className="surrogacy-section1-container-img-container shadowHome">
               <img
                 src={icons[0].img}
                 alt={icons[0].name}
                 className="surrogacy-section1-container-img"
               />
             </div>
-            <div className="surrogacy-section1-container-desc shadow1">
+            <div className="surrogacy-section1-container-desc shadowHome">
               <div className="surrogacy-section1-container-desc-content">
                 <p className="surrogacy-section1-container-desc-title1">
                   Infertility
@@ -143,7 +143,7 @@ export default function Surrogacy() {
             </div>
           </div>
           <div className="surrogacy-section1-container-content">
-            <div className="surrogacy-section1-container-img-container shadow1">
+            <div className="surrogacy-section1-container-img-container shadowHome">
               <img
                 src={icons[1].img}
                 alt={icons[1].name}
@@ -151,7 +151,7 @@ export default function Surrogacy() {
               />
             </div>
             <div
-              className="surrogacy-section1-container-desc shadow1"
+              className="surrogacy-section1-container-desc shadowHome"
               style={{ marginTop: "-18px" }}
             >
               <div className="surrogacy-section1-container-desc-content">
@@ -318,8 +318,23 @@ export default function Surrogacy() {
             </div>
           </div>
         </div>
+
         {/* Section 3 */}
-        <div>{/* btn goes here */}</div>
+        <div>
+          <button className="greenBtn shadowHome">
+            <img
+              src={process.env.PUBLIC_URL + "/icons/bti1.png"}
+              alt=""
+              className="iconImg"
+            />
+            <p> Free USA Surrogacy Consultation </p>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2Frightarrow.png?alt=media&token=9e5d95d9-267c-41f1-924f-de52f014109b"
+              alt=""
+              className="arraowImg"
+            />
+          </button>
+        </div>
         {/* Section 4 */}
         <div
           className="surrogacy-section2-container"
@@ -339,14 +354,14 @@ export default function Surrogacy() {
               for International Intended Parents
             </p>
             <div className="surrogacy-section4-container-content">
-              <div className="surrogacy-section4-container-img-container shadow1">
+              <div className="surrogacy-section4-container-img-container shadowHome">
                 <img
                   src={icons[2].img}
                   alt={icons[2].name}
                   className="surrogacy-section4-container-img"
                 />
               </div>
-              <div className="surrogacy-section4-container-desc shadow1">
+              <div className="surrogacy-section4-container-desc shadowHome">
                 <div className="surrogacy-section4-container-desc-content">
                   <p className="surrogacy-section4-container-desc-title1">
                     The United States is a well-known destination
@@ -366,7 +381,21 @@ export default function Surrogacy() {
           </div>
         </div>
         {/* Section 5 */}
-        <div>{/* btn goes here */}</div>
+        <div>
+          <button className="greenBtn shadowHome">
+            <img
+              src={process.env.PUBLIC_URL + "/icons/bti2.png"}
+              alt=""
+              className="iconImg"
+            />
+            <p> Let Us Bring Your Baby Home </p>
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2Frightarrow.png?alt=media&token=9e5d95d9-267c-41f1-924f-de52f014109b"
+              alt=""
+              className="arraowImg"
+            />
+          </button>
+        </div>
         {/* Section 6 */}
         <div
           className="surrogacy-section2-container"
@@ -385,7 +414,7 @@ export default function Surrogacy() {
           </div>
           <div className="surrogacy-section6-container-row">
             <div
-              className="surrogacy-section6-container-row-item shadow1"
+              className="surrogacy-section6-container-row-item shadowHome"
               onClick={() => navigate("/intakeForm")}
             >
               <img
@@ -398,7 +427,7 @@ export default function Surrogacy() {
               </p>
             </div>
             <div
-              className="surrogacy-section6-container-row-item shadow1"
+              className="surrogacy-section6-container-row-item shadowHome"
               onClick={() => navigate("/intakeForm")}
             >
               <img
@@ -411,7 +440,7 @@ export default function Surrogacy() {
               </p>
             </div>
             <div
-              className="surrogacy-section6-container-row-item shadow1"
+              className="surrogacy-section6-container-row-item shadowHome"
               onClick={() => navigate("/intakeForm")}
             >
               <img

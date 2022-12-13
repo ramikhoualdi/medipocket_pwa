@@ -103,7 +103,7 @@ export default function TopUsaHospitals() {
       <div className="blocsWrapper">
         {icons.map((item) => {
           return (
-            <div className="topHosBlocElement">
+            <div className="topHosBlocElement shadowHome">
               <div className="content">
                 <img alt="" src={item.img} />
                 <h4>Dr. A. Eli Gabayan</h4>
@@ -114,7 +114,7 @@ export default function TopUsaHospitals() {
           );
         })}
       </div>
-      <button className="greenBtn">
+      <button className="greenBtn shadowHome mg80">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FGroup.png?alt=media&token=3c43ec07-649d-41ed-a2ea-d55e7f7de605"
           alt=""

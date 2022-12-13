@@ -108,34 +108,27 @@ export default function HomePage() {
         <span>USA</span> Medical Services
       </h1>
       <div className="firstBlocWrapper">
-        <div className="homeComponent">
+        <div className="homeComponent shadowHome">
           <img
             src={process.env.PUBLIC_URL + "/icons/p1.jpg"}
             alt="img"
             className="bgImgHome1"
-            style={{ width: "105%", height: "105%" }}
           />
           <img
             src={process.env.PUBLIC_URL + "/icons/m1.png"}
             alt="img"
             className="bgImgHome2"
           />
-          <img
-            alt=""
-            src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhospitals%2Frami1.png?alt=media&token=cf611012-d8cf-4442-9fa4-c6b497357ebe"
-            className=""
-          />
           <div className="homeComponentContent">
             <h3>USA Specialists</h3>
             <p>Virtual Consultation USA Doctors</p>
           </div>
         </div>
-        <div className="homeComponent">
+        <div className="homeComponent shadowHome">
           <img
             src={process.env.PUBLIC_URL + "/icons/p2.png"}
             alt="img"
             className="bgImgHome1"
-            style={{ width: "100%", height: "100%" }}
           />
           <img
             src={process.env.PUBLIC_URL + "/icons/m2.png"}
@@ -147,12 +140,11 @@ export default function HomePage() {
             <p>World's Best Treatment</p>
           </div>
         </div>
-        <div className="homeComponent">
+        <div className="homeComponent shadowHome">
           <img
             src={process.env.PUBLIC_URL + "/icons/p3.png"}
             alt="img"
             className="bgImgHome1"
-            style={{ width: "100%", height: "100%" }}
           />
           <img
             src={process.env.PUBLIC_URL + "/icons/m3.png"}
@@ -164,12 +156,11 @@ export default function HomePage() {
             <p>Gender Selection USA Passport</p>
           </div>
         </div>
-        <div className="homeComponent">
+        <div className="homeComponent shadowHome">
           <img
             src={process.env.PUBLIC_URL + "/icons/p4.png"}
             alt="img"
             className="bgImgHome1"
-            style={{ width: "100%", height: "100%" }}
           />
           <img
             src={process.env.PUBLIC_URL + "/icons/m4.png"}
@@ -185,21 +176,21 @@ export default function HomePage() {
       <div className="secondBlocWrapper">
         <h2>Top USA Hospitals</h2>
         <div className="secondBlocSubWrapper">
-          <div className="secBlocElement">
+          <div className="secBlocElement shadowHome">
             <img
               alt=""
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FRectangle%202887.png?alt=media&token=15230067-798e-4955-8fa2-94a3f7aef135"
               className="secImg"
             />
           </div>
-          <div className="secBlocElement">
+          <div className="secBlocElement shadowHome">
             <img
               alt=""
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FRectangle%202887%20(1).png?alt=media&token=e8238509-42d5-4705-84e5-d2f25946de49"
               className="secImg"
             />
           </div>
-          <div className="secBlocElement">
+          <div className="secBlocElement shadowHome">
             <img
               alt=""
               src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FRectangle%202887%20(2).png?alt=media&token=5039cd04-f9b8-4b8b-83b2-70711264b796"
@@ -208,21 +199,21 @@ export default function HomePage() {
           </div>
         </div>
         <div className="secondBlocSubWrapper">
-          <div className="secBlocElement">
+          <div className="secBlocElement shadowHome">
             <img
               alt=""
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
               className="secImg"
             />
           </div>
-          <div className="secBlocElement">
+          <div className="secBlocElement shadowHome">
             <img
               alt=""
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
               className="secImg"
             />
           </div>
-          <div className="secBlocElement">
+          <div className="secBlocElement shadowHome">
             <img
               alt=""
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
@@ -230,7 +221,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <button className="greenBtn">
+        <button className="greenBtn shadowHome">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FplusIcon.png?alt=media&token=c711231f-3471-42f3-9fa8-9b5b0f1a78ee"
             alt=""
@@ -247,54 +238,64 @@ export default function HomePage() {
       <div className="thirdBlocWrapper">
         <h2>Specialities</h2>
         <div className="thirdBlocSubWrapper">
-          <div className="thirdBlocElement">
+          <div className="thirdBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
+                src={process.env.PUBLIC_URL + "/icons/i1.png"}
                 className="thirdImg"
               />
               <h4>Oncology</h4>
             </div>
           </div>
-          <div className="thirdBlocElement">
+          <div className="thirdBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
+                src={process.env.PUBLIC_URL + "/icons/i2.png"}
                 className="thirdImg"
               />
-              <h4>Oncology</h4>
+              <h4>Cardiology</h4>
             </div>
           </div>
-          <div className="thirdBlocElement">
+          <div className="thirdBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
+                src={process.env.PUBLIC_URL + "/icons/i3.png"}
                 className="thirdImg"
               />
-              <h4>Oncology</h4>
+              <h4>Neurology</h4>
             </div>
           </div>
-          <div className="thirdBlocElement">
+          <div className="thirdBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
+                src={process.env.PUBLIC_URL + "/icons/i4.png"}
                 className="thirdImg"
               />
-              <h4>Oncology</h4>
+              <h4>Rare Diseases</h4>
             </div>
           </div>
-          <div className="thirdBlocElement">
+          <div className="thirdBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5SnYxdaGT574Cik0XagpFtmoM0OHiKZxY8LSmsPDJuY_IiZAyWX5D1MKVzs_2rIjSgU&usqp=CAU"
+                src={process.env.PUBLIC_URL + "/icons/i5.png"}
                 className="thirdImg"
               />
-              <h4>Oncology</h4>
+              <h4>Mental Health</h4>
+            </div>
+          </div>
+          <div className="thirdBlocElement shadowHome">
+            <div className="content">
+              <img
+                alt=""
+                src={process.env.PUBLIC_URL + "/icons/i6.png"}
+                className="thirdImg"
+              />
+              <h4>Infertility</h4>
             </div>
           </div>
         </div>
@@ -302,7 +303,7 @@ export default function HomePage() {
       <div className="fourthBlocWrapper">
         <h2>Top USA Specialities</h2>
         <div className="fourthBlocSubWrapper">
-          <div className="fourthBlocElement">
+          <div className="fourthBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
@@ -314,7 +315,7 @@ export default function HomePage() {
               <p> Boston, USA </p>
             </div>
           </div>
-          <div className="fourthBlocElement">
+          <div className="fourthBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
@@ -326,7 +327,7 @@ export default function HomePage() {
               <p> Boston, USA </p>
             </div>
           </div>
-          <div className="fourthBlocElement">
+          <div className="fourthBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
@@ -338,7 +339,7 @@ export default function HomePage() {
               <p> Boston, USA </p>
             </div>
           </div>
-          <div className="fourthBlocElement">
+          <div className="fourthBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
@@ -350,7 +351,7 @@ export default function HomePage() {
               <p> Boston, USA </p>
             </div>
           </div>
-          <div className="fourthBlocElement">
+          <div className="fourthBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
@@ -362,7 +363,7 @@ export default function HomePage() {
               <p> Boston, USA </p>
             </div>
           </div>
-          <div className="fourthBlocElement">
+          <div className="fourthBlocElement shadowHome">
             <div className="content">
               <img
                 alt=""
@@ -375,7 +376,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <button className="greenBtn">
+        <button className="greenBtn shadowHome">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FheartAnalIcon.png?alt=media&token=5e75f4b0-f093-4e7a-a9d1-12d6b6240232"
             alt=""
@@ -517,7 +518,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <button className="greenBtn">
+        <button className="greenBtn shadowHome">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/medipocket2022.appspot.com/o/pwa_assets%2Fhome_page%2FphoneIcon.png?alt=media&token=b7504a18-c636-4458-a13c-57959a105560"
             alt=""
@@ -531,9 +532,9 @@ export default function HomePage() {
           />
         </button>
       </div>
-      <div className="lastBloc">
+      <div className="lastBloc ">
         <h2>MediPocket World</h2>
-        <div className="content shadow1">
+        <div className="content shadowHome">
           <p>
             When facing life-changing illness, getting access to premium
             healthcare of USA experts, medical opinion, teatment, gives you
